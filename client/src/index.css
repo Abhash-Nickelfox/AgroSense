@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* Keeps anchor-link scrolling (e.g. the nav's #overview link) from landing
+       underneath the fixed nav — without this, jumping to a section lands
+       exactly nav-height too far down compared to how the page rests on load. */
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background text-on-surface font-body-md antialiased;
+  }
+  ::selection {
+    @apply bg-fresh-leaf text-white;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(18, 59, 42, 0.1);
+  }
+  .organic-shadow {
+    box-shadow: 0 16px 32px -8px rgba(43, 28, 7, 0.08);
+  }
+  .ambient-shadow {
+    box-shadow: 0 24px 48px -12px rgba(43, 28, 7, 0.08);
+  }
+  .ambient-shadow-sm {
+    box-shadow: 0 8px 24px -4px rgba(43, 28, 7, 0.06);
+  }
+  .soft-shadow {
+    box-shadow: 0 8px 32px rgba(43, 28, 7, 0.08);
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, #002517 0%, #1b6c3b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .cinematic-zoom {
+    transition: transform 15s ease-out;
+    transform: scale(1.05);
+  }
+  .reveal.active .cinematic-zoom {
+    transform: scale(1);
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Scroll-reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active,
+.reveal-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 {
+  transition-delay: 150ms;
+}
+.reveal-delay-2 {
+  transition-delay: 300ms;
+}
