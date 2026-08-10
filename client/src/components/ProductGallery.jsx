@@ -1,4 +1,4 @@
-import MODULE_01_IMAGE from "../assets/Agrosense Product Gallery Smaple 1.png";
+import MODULE_01_IMAGE from "../assets/product-gallery-module-01.png";
 
 const MODULES = [
   { tag: "MODULE 01", title: "FIELD", image: MODULE_01_IMAGE },

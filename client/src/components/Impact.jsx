@@ -1,5 +1,5 @@
 import Icon from "./Icon";
-import AFTER_IMAGE from "../assets/Agrosense - imapct_2nd.png";
+import AFTER_IMAGE from "../assets/impact-after-photo.png";
 
 const BEFORE_IMAGE =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuCE9QqM5vpxXHJBeUsZxWq7bHSoq3KgRFLXXa88wGWTCGXChmgJBEbdItWhl0Hq5VGtInLqFJEmRLa4A-G7JzS0eW4H7W-HoML04xtnmvhPAxqTwt_NAM41n3d_hif1hbcLaiZvhlgNfAQIBaAVUpF6g3SvLJyTpisAhhQa6WuBJigrYH-55Dxn0mDveEuOeT5-yntcpq1fVNZ0uYBwW4ix-IbOBfRh9UJuI6yftwU50VNdeXc8XJmI";
