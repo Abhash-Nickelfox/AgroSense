@@ -1,4 +1,11 @@
-const LINKS = ["Privacy Policy", "Terms of Service", "Data Ethics", "Contact Us"];
+import { Link } from "react-router-dom";
+
+const LINKS = [
+  { label: "Privacy Policy", href: "#" },
+  { label: "Terms of Service", href: "#" },
+  { label: "Data Ethics", href: "#" },
+  { label: "Contact Us", href: "/discuss" },
+];
 
 export default function Footer() {
   return (
@@ -9,18 +16,18 @@ export default function Footer() {
             AgroSense
           </div>
           <div className="font-body-md text-body-md text-primary dark:text-primary-fixed opacity-70">
-            © 2024 AgroSense Intelligence. All rights reserved. Precision Geospatial Wisdom.
+            © 2026 AgroSense Intelligence. All rights reserved. Precision Geospatial Wisdom.
           </div>
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-start pt-2">
           {LINKS.map((link) => (
-            <a
-              key={link}
-              href="#"
+            <Link
+              key={link.label}
+              to={link.href}
               className="font-body-md text-body-md text-on-surface-variant hover:text-fresh-leaf transition-colors duration-200"
             >
-              {link}
-            </a>
+              {link.label}
+            </Link>
           ))}
         </div>
       </div>

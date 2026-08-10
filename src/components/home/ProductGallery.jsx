@@ -1,23 +1,23 @@
 import MODULE_01_IMAGE from "../../assets/product-gallery-module-01.png";
+import MODULE_02_IMAGE from "../../assets/Agrosense_Field Health..png";
+import MODULE_03_IMAGE from "../../assets/Agrosense_Field Risk.png";
+import MASTER_VIEW_IMAGE from "../../assets/Agrosense Dashboard updated.png";
 
 const MODULES = [
   { tag: "MODULE 01", title: "FIELD", image: MODULE_01_IMAGE },
-  { tag: "MODULE 02", title: "HEALTH", offset: true },
-  { tag: "MODULE 03", title: "RISK" },
+  { tag: "MODULE 02", title: "HEALTH", offset: true, image: MODULE_02_IMAGE },
+  { tag: "MODULE 03", title: "RISK", image: MODULE_03_IMAGE },
 ];
 
 export default function ProductGallery() {
   return (
-    <section className="py-section-gap bg-surface-container-low border-y border-outline-variant/20 overflow-hidden">
-      <div className="max-w-[1600px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <section className="pt-16 pb-section-gap bg-surface-container-low border-y border-outline-variant/20 overflow-hidden">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-12 items-end reveal">
           <div className="md:col-span-8">
-            <div className="font-label-caps text-label-caps text-outline mb-6 uppercase tracking-wider">
-              Section 06 — Product Gallery
+            <div className="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary -mt-3">
+              Product Gallery
             </div>
-            <h2 className="font-headline-lg-mobile md:font-headline-lg text-primary max-w-2xl">
-              Designed to make complexity feel simple.
-            </h2>
           </div>
         </div>
         <div className="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-6 pb-8 md:grid md:grid-cols-12 md:overflow-visible md:snap-none reveal reveal-delay-1">
@@ -52,12 +52,11 @@ export default function ProductGallery() {
           ))}
           <div className="min-w-[85vw] sm:min-w-[600px] md:min-w-0 md:col-span-12 snap-center group md:mt-8">
             <div className="aspect-[4/3] md:aspect-[21/9] bg-surface rounded-3xl flex items-end justify-start border border-outline-variant/20 shadow-sm relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-surface-variant/80 to-surface-variant/30 flex items-center justify-center transition-transform duration-700 group-hover:scale-[1.02]">
-                <span className="font-label-caps text-outline/40 text-5xl tracking-widest opacity-10">
-                  DASHBOARD MOCKUP
-                </span>
-              </div>
-              <div className="relative z-10 w-full p-8 md:p-12 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end h-full md:h-1/2 md:w-1/2">
+              <div
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-[1.02]"
+                style={{ backgroundImage: `url(${MASTER_VIEW_IMAGE})` }}
+              />
+              <div className="relative z-10 w-full p-8 md:p-12 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end h-full md:h-3/5">
                 <span className="font-label-caps text-white/80 tracking-widest mb-2">
                   MASTER VIEW
                 </span>

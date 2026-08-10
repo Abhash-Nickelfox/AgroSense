@@ -14,10 +14,10 @@ export default function Experience() {
             Designed for the Moments that Matter.
           </h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
-            We believe intelligence shouldn't be overwhelming. AgroSense translates
-            complex geospatial data and predictive modeling into a clean, authoritative
-            interface, allowing you to focus on high-level decision-making with
-            absolute clarity.
+            Agriculture is ultimately about people making decisions on the ground.
+            AgroSense turns complex data into clear, meaningful insights, helping teams
+            understand their fields, respond to changing conditions, and make better
+            decisions with confidence.
           </p>
         </div>
       </div>

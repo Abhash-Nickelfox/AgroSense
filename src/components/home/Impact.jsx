@@ -28,7 +28,7 @@ export default function Impact() {
             The Transformation
           </h3>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
-            Shifting from reactive field scouting to proactive geospatial intelligence.
+            Shifting fragmented agricultural workflows with structured digital operations.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
