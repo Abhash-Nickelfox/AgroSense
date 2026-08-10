@@ -1,4 +1,5 @@
-import Icon from "./Icon";
+import Icon from "../shared/Icon";
+import { CONTACT_MAILTO } from "../../lib/constants";
 
 const LINKS = [
   { href: "#overview", label: "Overview" },
@@ -8,7 +9,7 @@ const LINKS = [
   { href: "#impact", label: "Impact" },
 ];
 
-export default function Navbar({ onOpenContact }) {
+export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface/80 dark:bg-primary/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-all duration-300 ease-in-out border-b-0">
       <div className="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
@@ -31,12 +32,12 @@ export default function Navbar({ onOpenContact }) {
           ))}
         </div>
         <div className="hidden md:block">
-          <button
-            onClick={onOpenContact}
+          <a
+            href={CONTACT_MAILTO}
             className="bg-primary text-white px-6 py-2 rounded-lg font-body-md hover:bg-on-primary-fixed-variant transition-colors hover:opacity-80 shadow-sm"
           >
             Let's Discuss
-          </button>
+          </a>
         </div>
         <button className="md:hidden text-primary">
           <Icon name="menu" fill />

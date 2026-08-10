@@ -1,4 +1,6 @@
-export default function FinalCTA({ onOpenContact }) {
+import { CONTACT_MAILTO } from "../../lib/constants";
+
+export default function FinalCTA() {
   return (
     <section className="py-[160px] bg-primary text-white relative overflow-hidden">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center max-w-4xl relative z-10 reveal">
@@ -10,12 +12,12 @@ export default function FinalCTA({ onOpenContact }) {
           actionable intelligence.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <button
-            onClick={onOpenContact}
+          <a
+            href={CONTACT_MAILTO}
             className="bg-fresh-leaf text-white px-8 py-4 rounded-lg font-body-md hover:bg-secondary transition-colors font-medium shadow-lg hover:shadow-xl"
           >
             Let's Discuss
-          </button>
+          </a>
           <button className="bg-transparent border border-white/30 text-white px-8 py-4 rounded-lg font-body-md hover:bg-white/10 transition-colors font-medium">
             View All Projects
           </button>

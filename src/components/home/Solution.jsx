@@ -1,4 +1,4 @@
-import Icon from "./Icon";
+import Icon from "../shared/Icon";
 
 const MAIN_IMAGE =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuATJinV0My5IIg0jWGm0V2o5aEy_qmhXcJEljr5aYl-pfVHQ2BaJqZNMLPLnYBzDjUJ4lWW6OiIm63snIb3xvPv4OCefGj7j1HvOn0zWqC5em1pkB-Eu-VjbqK76PTdGg9W4i978WH0xSqaqULlz1Xqfx9H-t8iqz3V-GSW8H98TX2bgATkanRIGDNMPnyw5Lu0VjllH2dacQtWtXJwkLlncVYGR0ucwjYSV4GddZsnhIuOIfpYY6Iz";

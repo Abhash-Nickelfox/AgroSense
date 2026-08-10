@@ -1,4 +1,4 @@
-import Icon from "./Icon";
+import Icon from "../shared/Icon";
 
 const IMPACTS = [
   { icon: "map", title: "Structured Mapping", desc: "Precise boundaries and geospatial accuracy." },

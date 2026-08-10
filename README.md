@@ -1,35 +1,37 @@
 # AgroSense — Precision Geospatial Wisdom
 
-A full-stack recreation of the Stitch-designed AgroSense product showcase, built with **React + Tailwind CSS** on the front end and **Node/Express** on the back end.
+A recreation of the Stitch-designed AgroSense product showcase, built with **React (Vite) + Tailwind CSS**.
 
 ## Structure
 
 ```
-AgeroSense/
-├─ client/     React (Vite) + Tailwind CSS front end
-├─ server/     Express API (contact form endpoint, serves the client build in production)
-└─ package.json  Root scripts to run both together
+src/
+├─ components/
+│  ├─ layout/     Navbar, Footer
+│  ├─ home/       page sections (Hero, Challenge, Solution, Experience, Impact, …)
+│  └─ shared/     reusable pieces (Icon)
+├─ hooks/         useReveal (scroll-reveal animation)
+├─ lib/           constants (contact email, etc.)
+└─ assets/        local images
 ```
 
 ## Getting started
 
 ```bash
-npm run install:all   # installs client + server dependencies
-npm run dev            # runs Express (port 5000) and Vite (port 5175) together
+npm install
+npm run dev       # http://localhost:5175
 ```
-
-Open http://localhost:5175 — API calls to `/api/*` are proxied to the Express server.
 
 ## Production build
 
 ```bash
-npm run build   # builds the React app into client/dist
-npm start        # builds, then serves client/dist from Express on PORT (default 5000)
+npm run build     # outputs to dist/
+npm run preview   # preview the production build locally
 ```
 
 ## Notes
 
-- Tailwind theme (colors, spacing, type scale, radii) is ported 1:1 from the Stitch export's inline `tailwind.config` into [client/tailwind.config.js](client/tailwind.config.js).
-- Scroll-reveal animations are reproduced via the [useReveal](client/src/hooks/useReveal.js) hook (IntersectionObserver), matching the original `<script>` behavior.
-- The "Let's Discuss" buttons (nav + final CTA) open a contact modal that POSTs to `server/routes/contact.js`. Submissions are stored in-memory for now — swap in a real database/email service for production use.
-- Most section imagery uses the same hosted URLs from the Stitch export (Google-hosted AI renders + Unsplash placeholders). A few images have been replaced with cleaner local assets in [client/src/assets](client/src/assets) — swap in the rest as final assets become available.
+- Tailwind theme (colors, spacing, type scale, radii) is ported 1:1 from the Stitch export's inline `tailwind.config` into [tailwind.config.js](tailwind.config.js).
+- Scroll-reveal animations are reproduced via the [useReveal](src/hooks/useReveal.js) hook (IntersectionObserver), matching the original `<script>` behavior.
+- The "Let's Discuss" buttons are `mailto:` links (see [src/lib/constants.js](src/lib/constants.js)) — update `CONTACT_EMAIL` to your real inbox.
+- Most section imagery uses the same hosted URLs from the Stitch export (Google-hosted AI renders + Unsplash placeholders). A few images have been replaced with cleaner local assets in [src/assets](src/assets) — swap in the rest as final assets become available.

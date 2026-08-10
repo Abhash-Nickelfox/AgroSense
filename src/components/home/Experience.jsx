@@ -1,6 +1,6 @@
-import Icon from "./Icon";
-import FIELD_MAPPING_IMAGE from "../assets/field-mapping-screen.png";
-import PREDICTIVE_RISK_IMAGE from "../assets/predictive-risk-chart.png";
+import Icon from "../shared/Icon";
+import FIELD_MAPPING_IMAGE from "../../assets/field-mapping-screen.png";
+import PREDICTIVE_RISK_IMAGE from "../../assets/predictive-risk-chart.png";
 
 export default function Experience() {
   return (
