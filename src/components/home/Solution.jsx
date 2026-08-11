@@ -15,15 +15,17 @@ export default function Solution() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal">
         {/* Narrative Canvas */}
         <div className="md:col-span-5 md:col-start-1 z-10 space-y-8 relative">
-          <div className="w-16 h-1 bg-fresh-leaf rounded-full" />
+          <span className="inline-block px-3 py-1 bg-fresh-leaf text-white font-label-caps text-label-caps rounded-full uppercase tracking-widest w-fit">
+            The Solution
+          </span>
           <h2 className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary tracking-tight">
             One Connected <br />
             <span className="text-surface-tint">Intelligence Experience.</span>
           </h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md">
             Introducing the AgroSense ecosystem. We bridge the critical gap between raw
-            field data and high-level, actionable geospatial wisdom, empowering
-            decision-makers with editorial grace.
+            field data and clear, actionable geospatial insights, helping decision-makers
+            understand complex information with confidence.
           </p>
         </div>
 

@@ -21,7 +21,7 @@ export default function Technology() {
           {STACK.map((tech) => (
             <span
               key={tech.name}
-              className="flex items-center gap-3 font-bold text-xl tracking-wider opacity-50 hover:opacity-100 hover:text-primary transition-all cursor-default"
+              className="flex items-center gap-3 font-bold text-xl tracking-wider text-primary cursor-default"
             >
               <img src={tech.logo} alt={`${tech.name} logo`} className="w-6 h-6 object-contain rounded-sm" />
               {tech.name}

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 const LINKS = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Data Ethics", href: "#" },
+  { label: "Problem", href: "/#challenge" },
+  { label: "Solution", href: "/#solution" },
+  { label: "Impact", href: "/#impact" },
   { label: "Contact Us", href: "/discuss" },
 ];
 

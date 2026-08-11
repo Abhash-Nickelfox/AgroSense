@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom";
 import Icon from "../shared/Icon";
+import useActiveSection from "../../hooks/useActiveSection";
 
 const LINKS = [
-  { href: "/#overview", label: "Overview" },
-  { href: "/#challenge", label: "Challenge" },
-  { href: "/#solution", label: "Solution" },
-  { href: "/#experience", label: "Experience" },
-  { href: "/#impact", label: "Impact" },
+  { href: "/#overview", id: "overview", label: "Overview" },
+  { href: "/#challenge", id: "challenge", label: "Challenge" },
+  { href: "/#solution", id: "solution", label: "Solution" },
+  { href: "/#experience", id: "experience", label: "Experience" },
+  { href: "/#impact", id: "impact", label: "Impact" },
 ];
 
+const SECTION_IDS = LINKS.map((link) => link.id);
+
 export default function Navbar() {
+  const activeId = useActiveSection(SECTION_IDS);
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface/80 dark:bg-primary/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-all duration-300 ease-in-out border-b-0">
       <div className="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
@@ -24,7 +29,11 @@ export default function Navbar() {
             <Link
               key={link.href}
               to={link.href}
-              className="text-on-surface-variant hover:text-secondary hover:font-bold hover:border-b-2 hover:border-secondary pb-1 transition-colors text-body-md font-body-md"
+              className={
+                activeId === link.id
+                  ? "text-secondary font-bold border-b-2 border-secondary pb-1 text-body-md font-body-md"
+                  : "text-on-surface-variant hover:text-secondary hover:font-bold hover:border-b-2 hover:border-secondary pb-1 transition-colors text-body-md font-body-md"
+              }
             >
               {link.label}
             </Link>

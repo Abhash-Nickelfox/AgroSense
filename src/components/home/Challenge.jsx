@@ -8,17 +8,19 @@ export default function Challenge() {
       className="pt-section-gap pb-24 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto relative overflow-hidden bg-background reveal"
     >
       <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10">
-        <div className="md:col-span-8 md:col-start-1">
+        <div className="md:col-span-12">
           <span className="inline-block px-3 py-1 bg-sage-bg text-primary font-label-caps text-label-caps rounded-full mb-6 uppercase tracking-widest">
             The Problem Space
           </span>
-          <h2 className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-8 text-balance">
-            The Fragmented Reality of Modern Farming.
+          <h2 className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-8">
+            The Fragmented Reality of
+            <br />
+            Modern Farming.
           </h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-            A chasm exists between raw environmental data and actionable geospatial
-            intelligence. Today's decision-makers are drowning in disconnected metrics
-            while crucial environmental shifts go unnoticed until it's too late.
+            There's a gap between raw environmental data and useful geospatial insights.
+            Today's decision-makers are overwhelmed by disconnected information, while
+            important environmental changes often go unnoticed until it's too late.
           </p>
         </div>
       </div>
