@@ -14,7 +14,7 @@ export default function Technology() {
   return (
     <section className="py-20 bg-surface reveal">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
-        <div className="text-2xl font-bold text-primary mb-10">
+        <div className="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-10">
           Technology
         </div>
         <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 text-outline items-center">
