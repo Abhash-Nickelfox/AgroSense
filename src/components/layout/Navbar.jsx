@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "../shared/Icon";
 import useActiveSection from "../../hooks/useActiveSection";
@@ -14,6 +15,8 @@ const SECTION_IDS = LINKS.map((link) => link.id);
 
 export default function Navbar() {
   const activeId = useActiveSection(SECTION_IDS);
+  const [hoveredId, setHoveredId] = useState(null);
+  const highlightedId = hoveredId ?? activeId;
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface/80 dark:bg-primary/80 backdrop-blur-xl shadow-sm dark:shadow-none transition-all duration-300 ease-in-out border-b-0">
@@ -29,10 +32,12 @@ export default function Navbar() {
             <Link
               key={link.href}
               to={link.href}
+              onMouseEnter={() => setHoveredId(link.id)}
+              onMouseLeave={() => setHoveredId(null)}
               className={
-                activeId === link.id
+                highlightedId === link.id
                   ? "text-secondary font-bold border-b-2 border-secondary pb-1 text-body-md font-body-md"
-                  : "text-on-surface-variant hover:text-secondary hover:font-bold hover:border-b-2 hover:border-secondary pb-1 transition-colors text-body-md font-body-md"
+                  : "text-on-surface-variant border-b-2 border-transparent pb-1 transition-colors text-body-md font-body-md"
               }
             >
               {link.label}

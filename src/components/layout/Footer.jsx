@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 
 const LINKS = [
+  { label: "Home", href: "/" },
   { label: "Problem", href: "/#challenge" },
   { label: "Solution", href: "/#solution" },
+  { label: "Experience", href: "/#experience" },
   { label: "Impact", href: "/#impact" },
   { label: "Contact Us", href: "/discuss" },
 ];
@@ -16,7 +18,7 @@ export default function Footer() {
             AgroSense
           </div>
           <div className="font-body-md text-body-md text-primary dark:text-primary-fixed opacity-70">
-            © 2026 AgroSense Intelligence. All rights reserved. Precision Geospatial Wisdom.
+            © 2026 AgroSense Intelligence. All rights reserved.
           </div>
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-start pt-2">

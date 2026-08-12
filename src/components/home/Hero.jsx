@@ -21,12 +21,6 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-gutter">
         <div className="md:col-span-7 flex flex-col justify-center">
-          <div className="inline-flex items-center space-x-2 bg-sage-bg/80 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 w-fit border border-primary-container/10">
-            <span className="w-2 h-2 rounded-full bg-fresh-leaf animate-pulse" />
-            <span className="font-label-caps text-label-caps text-primary uppercase tracking-widest">
-              Platform Showcase
-            </span>
-          </div>
           <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
             Agricultural Data Into{" "}
             <span className="text-gradient">Intelligent Decisions.</span>
