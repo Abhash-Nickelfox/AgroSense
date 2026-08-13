@@ -9,7 +9,6 @@ import Experience from "../components/home/Experience";
 import Impact from "../components/home/Impact";
 import ProductGallery from "../components/home/ProductGallery";
 import ImpactFeatures from "../components/home/ImpactFeatures";
-import Technology from "../components/home/Technology";
 import FinalCTA from "../components/home/FinalCTA";
 
 export default function Home() {
@@ -36,7 +35,6 @@ export default function Home() {
       <Impact />
       <ProductGallery />
       <ImpactFeatures />
-      <Technology />
       <FinalCTA />
     </main>
   );
