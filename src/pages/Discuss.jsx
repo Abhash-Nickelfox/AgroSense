@@ -25,6 +25,14 @@ export default function Discuss() {
     setStatus("submitting");
     setErrorMessage("");
 
+    if (!supabase) {
+      setStatus("error");
+      setErrorMessage(
+        "This form isn't connected to a database yet. Please contact us directly for now."
+      );
+      return;
+    }
+
     const { error } = await supabase.from("discuss_submissions").insert({
       name: form.name,
       email: form.email,
