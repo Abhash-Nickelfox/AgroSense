@@ -14,11 +14,11 @@ export default function Solution() {
     >
       <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal">
         {/* Narrative Canvas */}
-        <div className="md:col-span-5 md:col-start-1 z-10 space-y-8 relative">
+        <div className="md:col-span-5 md:col-start-1 min-w-0 z-10 space-y-8 relative">
           <span className="inline-block px-3 py-1 bg-fresh-leaf text-white font-label-caps text-label-caps rounded-full uppercase tracking-widest w-fit">
             The Solution
           </span>
-          <h2 className="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary tracking-tight">
+          <h2 className="font-display-lg-mobile text-display-lg-mobile xl:font-display-lg xl:text-display-lg text-primary tracking-tight break-words">
             One Connected <br />
             <span className="text-surface-tint">Intelligence Experience.</span>
           </h2>
@@ -32,7 +32,7 @@ export default function Solution() {
         {/* High-Impact Visual Canvas with UI Overlays */}
         <div className="md:col-span-7 md:col-start-6 mt-12 md:mt-0 relative reveal reveal-delay-1">
           <div
-            className="rounded-xl overflow-hidden aspect-[4/3] relative ambient-shadow border border-primary/10"
+            className="rounded-xl overflow-hidden aspect-[4/3] relative ambient-shadow border border-primary/10 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url('${MAIN_IMAGE}')` }}
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-transparent" />
@@ -81,7 +81,7 @@ export default function Solution() {
             </p>
           </div>
           <div
-            className="md:w-1/2 relative bg-surface min-h-[250px]"
+            className="md:w-1/2 relative bg-surface bg-contain md:bg-cover bg-center bg-no-repeat min-h-[250px]"
             style={{ backgroundImage: `url('${FARMERS_IMAGE}')` }}
           >
             <div className="absolute bottom-4 right-4 bg-surface-container-lowest/80 backdrop-blur border border-white/20 p-3 rounded-lg shadow-sm">
@@ -132,7 +132,7 @@ export default function Solution() {
         </div>
 
         {/* Bento Item 3: The Platform Engine (Full Width) */}
-        <div className="md:col-span-12 bg-primary rounded-2xl p-8 md:p-12 ambient-shadow flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+        <div className="md:col-span-12 bg-primary rounded-2xl p-8 md:p-12 ambient-shadow flex flex-col md:flex-row items-stretch md:items-center justify-between relative overflow-hidden">
           <div
             className="absolute inset-0 opacity-10"
             style={{
@@ -151,17 +151,17 @@ export default function Solution() {
             </p>
           </div>
           <div className="relative z-10 md:w-5/12 mt-8 md:mt-0">
-            <div className="relative w-full aspect-[4/3]">
+            <div className="relative w-full">
               <div className="absolute inset-4 bg-surface/10 rounded-xl border border-white/20 backdrop-blur-sm transform rotate-3" />
               <div className="absolute inset-2 bg-surface/20 rounded-xl border border-white/30 backdrop-blur-md transform -rotate-2" />
-              <div className="absolute inset-0 bg-surface-container-lowest rounded-xl border border-white/10 shadow-2xl p-6 flex flex-col text-primary">
+              <div className="relative bg-surface-container-lowest rounded-xl border border-white/10 shadow-2xl p-6 flex flex-col text-primary">
                 <div className="flex justify-between items-center mb-4 border-b border-surface-variant pb-2">
                   <span className="font-label-caps text-label-caps tracking-wide">
                     Data Pipeline Status
                   </span>
                   <Icon name="check_circle" className="text-fresh-leaf text-sm" />
                 </div>
-                <div className="space-y-3 flex-grow">
+                <div className="space-y-3">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-on-surface-variant font-data-viz">
                       Sentinel-2 Ingestion

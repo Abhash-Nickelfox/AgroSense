@@ -23,13 +23,19 @@ export default function useActiveSection(ids) {
       return;
     }
 
+    const intersecting = new Map();
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
+          intersecting.set(entry.target.id, entry.isIntersecting);
         });
+        // Multiple sections can report their intersection state in the same
+        // callback batch; picking the first (in document/nav order) that's
+        // currently intersecting avoids "last entry wins" races that could
+        // otherwise leave a lower section highlighted while still at the top.
+        const current = ids.find((id) => intersecting.get(id));
+        if (current) setActiveId(current);
       },
       // Treat a section as "current" once it crosses a line just below
       // the fixed nav, and stop counting it once it's mostly scrolled past.

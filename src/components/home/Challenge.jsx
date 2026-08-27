@@ -26,7 +26,7 @@ export default function Challenge() {
       </div>
 
       {/* Editorial Image Breakout */}
-      <div className="mt-16 relative w-full aspect-video md:aspect-[21/9] rounded-xl overflow-hidden soft-shadow reveal reveal-delay-1">
+      <div className="mt-16 relative w-full aspect-video min-h-[380px] sm:min-h-[320px] md:min-h-0 md:aspect-[21/9] rounded-xl overflow-hidden soft-shadow reveal reveal-delay-1">
         <div
           className="bg-cover bg-center w-full h-full absolute inset-0"
           style={{ backgroundImage: `url('${EDITORIAL_IMAGE}')` }}

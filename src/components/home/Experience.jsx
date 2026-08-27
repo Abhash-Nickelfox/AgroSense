@@ -25,8 +25,8 @@ export default function Experience() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 reveal reveal-delay-1">
         {/* Feature 1: Field Mapping (Large Span) */}
         <div className="md:col-span-12 bg-surface-container-lowest rounded-xl border border-primary/10 overflow-hidden ambient-shadow relative group">
-          <div className="absolute inset-x-0 bottom-0 h-48 md:h-56 bg-gradient-to-t from-primary/90 to-transparent z-10 flex flex-col justify-end p-8 md:p-12">
-            <span className="inline-block px-3 py-1 bg-sage-bg text-primary font-label-caps text-label-caps rounded-full w-max mb-4">
+          <div className="absolute inset-x-0 bottom-0 md:h-56 bg-gradient-to-t from-primary via-primary/95 md:via-primary/90 to-transparent z-10 flex flex-col justify-end p-6 md:p-12">
+            <span className="inline-block px-3 py-1 bg-sage-bg text-primary font-label-caps text-label-caps rounded-full w-max mb-3 md:mb-4">
               Precision Cartography
             </span>
             <h3 className="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-white mb-2">
@@ -39,7 +39,7 @@ export default function Experience() {
           </div>
           <img
             alt="Field Mapping Interface"
-            className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-96 sm:h-[420px] md:h-96 lg:h-[500px] object-contain bg-primary transition-transform duration-700 group-hover:scale-105"
             src={FIELD_MAPPING_IMAGE}
           />
         </div>
@@ -83,10 +83,10 @@ export default function Experience() {
               </li>
             </ul>
           </div>
-          <div className="bg-primary/5 h-64 md:h-auto relative">
+          <div className="bg-primary/5 aspect-[3/2] md:aspect-auto md:h-full relative">
             <img
               alt="Predictive Risk UI"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               src={PREDICTIVE_RISK_IMAGE}
             />
           </div>

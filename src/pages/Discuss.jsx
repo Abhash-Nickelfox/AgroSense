@@ -25,6 +25,14 @@ export default function Discuss() {
     setStatus("submitting");
     setErrorMessage("");
 
+    if (!supabase) {
+      setStatus("error");
+      setErrorMessage(
+        "The form isn't connected yet — Supabase configuration is missing."
+      );
+      return;
+    }
+
     const { error } = await supabase.from("discuss_submissions").insert({
       name: form.name,
       email: form.email,

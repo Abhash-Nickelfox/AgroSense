@@ -75,7 +75,7 @@ export default function Impact() {
                 src={AFTER_IMAGE}
               />
               <div className="absolute inset-0 bg-white/10" />
-              <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur text-white px-3 py-1 rounded font-label-caps text-label-caps tracking-widest">
+              <div className="absolute bottom-4 right-4 bg-primary/90 backdrop-blur text-white px-3 py-1 rounded font-label-caps text-label-caps tracking-widest">
                 AGROSENSE INTELLIGENCE
               </div>
               <div className="absolute top-2 left-2 bg-surface rounded-lg shadow-sm px-2.5 py-1.5 w-48">
@@ -140,9 +140,9 @@ export default function Impact() {
 
       {/* Business Value Impact Areas */}
       <div className="bg-sage-bg py-16 px-8 rounded-2xl border border-primary/5 reveal reveal-delay-2 mb-section-gap">
-        <div className="grid md:grid-cols-12 gap-gutter">
-          <div className="md:col-span-4 flex flex-col justify-center">
-            <h3 className="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-6">
+        <div className="grid lg:grid-cols-12 gap-gutter">
+          <div className="lg:col-span-4 min-w-0 flex flex-col justify-center mb-8 lg:mb-0">
+            <h3 className="font-headline-lg-mobile text-headline-lg-mobile xl:font-headline-lg xl:text-headline-lg text-primary mb-6 break-words">
               Quantifiable Business Value
             </h3>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
@@ -150,7 +150,7 @@ export default function Impact() {
               environmental variables into manageable metrics.
             </p>
           </div>
-          <div className="md:col-span-8 grid sm:grid-cols-2 gap-6">
+          <div className="lg:col-span-8 grid sm:grid-cols-2 gap-6">
             <div className="bg-surface p-8 rounded-xl border border-primary/10 hover:shadow-xl hover:shadow-tertiary-container/10 transition-all duration-300">
               <Icon name="trending_down" className="text-4xl text-primary mb-4" fill />
               <div className="font-display-lg text-display-lg text-primary mb-2">32%</div>
