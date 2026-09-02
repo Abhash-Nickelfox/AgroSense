@@ -16,7 +16,10 @@ export default function Hero() {
           className="bg-cover bg-center w-full h-full cinematic-zoom"
           style={{ backgroundImage: `url('${HERO_IMAGE}')` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-surface-container-lowest/95 via-surface-container-lowest/70 to-transparent w-3/5" />
+        {/* Mobile: the heading/paragraph stack full-width here, so they need a
+            full-width fade rather than the desktop's left-column-only one. */}
+        <div className="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/35 via-surface-container-lowest/55 to-surface-container-lowest/65 md:hidden" />
+        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-surface-container-lowest/95 via-surface-container-lowest/70 to-transparent w-3/5" />
       </div>
 
       <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-gutter">
