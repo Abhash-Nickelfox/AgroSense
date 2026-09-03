@@ -24,8 +24,23 @@ export default function Experience() {
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 reveal reveal-delay-1">
         {/* Feature 1: Field Mapping (Large Span) */}
-        <div className="md:col-span-12 bg-surface-container-lowest rounded-xl border border-primary/10 overflow-hidden ambient-shadow relative group">
-          <div className="absolute inset-x-0 bottom-0 md:h-56 bg-gradient-to-t from-primary via-primary/95 md:via-primary/90 to-transparent z-10 flex flex-col justify-end p-6 md:p-12">
+        <div className="md:col-span-12 rounded-xl border border-primary/10 overflow-hidden ambient-shadow relative group grid">
+          {/* Image and caption are stacked in the same grid cell so the row
+              sizes to whichever is taller — the image via its own true aspect
+              ratio (always full-bleed, never cropped or letterboxed), the
+              caption via its own text content (never clipped). Below md the
+              caption's text needs more room than the short wide image
+              provides, so the row grows and the gradient's fade simply
+              extends to cover that extra height too — no fixed-height guess,
+              no hard seam between photo and caption. */}
+          <div className="col-start-1 row-start-1 self-start w-full aspect-[1915/821] overflow-hidden">
+            <img
+              alt="Field Mapping Interface"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              src={FIELD_MAPPING_IMAGE}
+            />
+          </div>
+          <div className="col-start-1 row-start-1 self-end z-10 bg-gradient-to-t from-primary via-primary/70 to-transparent flex flex-col justify-end p-6 md:p-12">
             <span className="inline-block px-3 py-1 bg-sage-bg text-primary font-label-caps text-label-caps rounded-full w-max mb-3 md:mb-4">
               Precision Cartography
             </span>
@@ -37,15 +52,11 @@ export default function Experience() {
               indices. Pan, zoom, and analyze with zero latency.
             </p>
           </div>
-          <img
-            alt="Field Mapping Interface"
-            className="w-full h-96 sm:h-[420px] md:h-96 lg:h-[500px] object-contain bg-primary transition-transform duration-700 group-hover:scale-105"
-            src={FIELD_MAPPING_IMAGE}
-          />
         </div>
 
         {/* Feature 2: Predictive Risk (Wide) */}
-        <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-0 bg-surface-container-low rounded-xl border border-primary/10 overflow-hidden ambient-shadow">
+        <div className="@container md:col-span-12 bg-surface-container-low rounded-xl border border-primary/10 overflow-hidden ambient-shadow">
+        <div className="grid grid-cols-1 @5xl:grid-cols-2 gap-0">
           <div className="p-8 md:p-12 flex flex-col justify-center">
             <span className="inline-block px-3 py-1 bg-surface text-risk-amber border border-risk-amber/20 font-label-caps text-label-caps rounded-full w-max mb-6">
               Early Warning System
@@ -83,13 +94,14 @@ export default function Experience() {
               </li>
             </ul>
           </div>
-          <div className="bg-primary/5 aspect-[3/2] md:aspect-auto md:h-full relative">
+          <div className="bg-primary/5 aspect-[3/2] @5xl:aspect-auto @5xl:h-full relative">
             <img
               alt="Predictive Risk UI"
               className="w-full h-full object-contain"
               src={PREDICTIVE_RISK_IMAGE}
             />
           </div>
+        </div>
         </div>
       </div>
     </section>

@@ -50,22 +50,22 @@ export default function ProductGallery() {
               </div>
             </div>
           ))}
-          <div className="min-w-[85vw] sm:min-w-[600px] md:min-w-0 md:col-span-12 snap-center group md:mt-8">
-            <div className="aspect-[4/3] md:aspect-[21/9] bg-surface rounded-3xl flex items-end justify-start border border-outline-variant/20 shadow-sm relative overflow-hidden">
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-[1.02]"
-                style={{ backgroundImage: `url(${MASTER_VIEW_IMAGE})` }}
-              />
-              <div className="relative z-10 w-full p-8 md:p-12 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end h-full md:h-3/5">
-                <span className="font-label-caps text-white/80 tracking-widest mb-2">
-                  MASTER VIEW
-                </span>
-                <span className="font-headline-lg-mobile md:text-5xl font-bold text-white leading-tight">
-                  OVERVIEW &amp;
-                  <br />
-                  INTELLIGENCE
-                </span>
-              </div>
+        </div>
+        <div className="mt-6 md:mt-8 group reveal reveal-delay-1">
+          <div className="aspect-[4/3] md:aspect-[21/9] bg-surface rounded-3xl flex items-end justify-start border border-outline-variant/20 shadow-sm relative overflow-hidden">
+            <div
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-[1.02]"
+              style={{ backgroundImage: `url(${MASTER_VIEW_IMAGE})` }}
+            />
+            <div className="relative z-10 w-full p-8 md:p-12 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end h-full md:h-3/5">
+              <span className="font-label-caps text-white/80 tracking-widest mb-2">
+                MASTER VIEW
+              </span>
+              <span className="font-headline-lg-mobile md:text-5xl font-bold text-white leading-tight">
+                OVERVIEW &amp;
+                <br />
+                INTELLIGENCE
+              </span>
             </div>
           </div>
         </div>

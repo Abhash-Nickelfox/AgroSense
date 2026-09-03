@@ -16,14 +16,15 @@ export default function Hero() {
           className="bg-cover bg-center w-full h-full cinematic-zoom"
           style={{ backgroundImage: `url('${HERO_IMAGE}')` }}
         />
-        {/* Mobile: the heading/paragraph stack full-width here, so they need a
-            full-width fade rather than the desktop's left-column-only one. */}
-        <div className="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/35 via-surface-container-lowest/55 to-surface-container-lowest/65 md:hidden" />
-        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-surface-container-lowest/95 via-surface-container-lowest/70 to-transparent w-3/5" />
+        {/* Below lg the heading/paragraph/card all stack full-width, so they
+            need a full-width fade rather than the desktop's left-column-only
+            one, which only suits the two-column layout from lg up. */}
+        <div className="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/35 via-surface-container-lowest/55 to-surface-container-lowest/65 lg:hidden" />
+        <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-surface-container-lowest/95 via-surface-container-lowest/70 to-transparent w-3/5" />
       </div>
 
-      <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-gutter">
-        <div className="md:col-span-7 flex flex-col justify-center">
+      <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        <div className="lg:col-span-7 flex flex-col justify-center">
           <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
             Agricultural Data Into{" "}
             <span className="text-gradient">Intelligent Decisions.</span>
@@ -46,8 +47,8 @@ export default function Hero() {
         </div>
 
         {/* Hero Visual Glimpse */}
-        <div className="hidden md:block md:col-span-5 relative">
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full max-w-[440px] glass-card rounded-xl organic-shadow p-6 overflow-hidden border border-outline-variant/30 backdrop-blur-2xl bg-white/40">
+        <div className="lg:col-span-5 relative mt-12 lg:mt-0">
+          <div className="relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 w-full max-w-[440px] mx-auto lg:mx-0 glass-card rounded-xl organic-shadow p-6 overflow-hidden border border-outline-variant/30 backdrop-blur-2xl bg-white/40">
             <div className="flex justify-between items-center mb-6">
               <span className="font-label-caps text-label-caps text-on-surface-variant">
                 Field Sector 7A
